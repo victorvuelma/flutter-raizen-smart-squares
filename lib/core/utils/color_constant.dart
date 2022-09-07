@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class ColorConstant {
+  const ColorConstant._();
+
   static const Color purple800 = Color(0xFF781E77);
 
   static const Color primary = purple800;

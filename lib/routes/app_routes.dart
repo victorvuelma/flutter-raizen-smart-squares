@@ -1,3 +1,5 @@
+import 'package:raizen_smart_squares/presentation/qr_code_scanner/binding/qr_code_scanner_binding.dart';
+import 'package:raizen_smart_squares/presentation/qr_code_scanner/qr_code_scanner_screen.dart';
 import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/resultado_exercicio_screen.dart';
 import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/binding/resultado_exercicio_binding.dart';
 import 'package:raizen_smart_squares/presentation/localizacao_screen/localizacao_screen.dart';
@@ -14,12 +16,8 @@ import 'package:raizen_smart_squares/presentation/login_screen/login_screen.dart
 import 'package:raizen_smart_squares/presentation/login_screen/binding/login_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/sele_o_beneficio_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/binding/sele_o_beneficio_binding.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_three_screen/qr_code_three_screen.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_three_screen/binding/qr_code_three_binding.dart';
 import 'package:raizen_smart_squares/presentation/frame_six_screen/frame_six_screen.dart';
 import 'package:raizen_smart_squares/presentation/frame_six_screen/binding/frame_six_binding.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_two_screen/qr_code_two_screen.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_two_screen/binding/qr_code_two_binding.dart';
 import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/beneficio_resgatado_screen.dart';
 import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/binding/beneficio_resgatado_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/sele_o_beneficio_one_screen.dart';
@@ -58,6 +56,8 @@ class AppRoutes {
 
   static String qrCodeIntroScreen = '/qr_code_intro_screen';
 
+  static String qrCodeScannerScreen = '/qr_code_scanner_screen';
+
   static String resultadoExercicioScreen = '/resultado_exercicio_screen';
 
   static String localizacaoScreen = '/localizacao_screen';
@@ -68,11 +68,7 @@ class AppRoutes {
 
   static String seleOBeneficioScreen = '/sele_o_beneficio_screen';
 
-  static String qrCodeThreeScreen = '/qr_code_three_screen';
-
   static String frameSixScreen = '/frame_six_screen';
-
-  static String qrCodeTwoScreen = '/qr_code_two_screen';
 
   static String beneficioResgatadoScreen = '/beneficio_resgatado_screen';
 
@@ -286,6 +282,13 @@ class AppRoutes {
       page: () => const QRCodeIntroScreen(),
       bindings: [
         QRCodeIntroBinding(),
+      ],
+    ),
+    GetPage(
+      name: qrCodeScannerScreen,
+      page: () => const QRCodeScannerScreen(),
+      bindings: [
+        QRCodeScannerBinding(),
       ],
     ),
   ];

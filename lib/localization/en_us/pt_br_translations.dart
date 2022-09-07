@@ -24,6 +24,8 @@ final Map<String, String> ptBr = {
   "msg_qrcode_intro_ready":
       "Quando estiver pronto é só clicar no botão abaixo! ",
   "msg_qrcode_intro_read": "Ler o QR Code",
+  "msg_qrcode_read_how":
+      "Posicione o QRCode abaixo e aguarde. A leitura é automática."
 
   // 'msg_descubra_todo_o':
   //     'Descubra todo o universo de possibilidades das Smart Squares em um só lugar!',

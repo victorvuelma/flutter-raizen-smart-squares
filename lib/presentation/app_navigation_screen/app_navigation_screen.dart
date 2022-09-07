@@ -523,7 +523,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapQRCodeThree();
+                                              // onTapQRCodeThree();
                                             },
                                             child: Container(
                                                 width:
@@ -625,7 +625,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapQRCodeTwo();
+                                              // onTapQRCodeTwo();
                                             },
                                             child: Container(
                                                 width:
@@ -1333,16 +1333,8 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
     );
   }
 
-  onTapQRCodeThree() {
-    Get.toNamed(AppRoutes.qrCodeThreeScreen);
-  }
-
   onTapFrameSix() {
     Get.toNamed(AppRoutes.frameSixScreen);
-  }
-
-  onTapQRCodeTwo() {
-    Get.toNamed(AppRoutes.qrCodeTwoScreen);
   }
 
   onTapBeneficioresgatado() {
