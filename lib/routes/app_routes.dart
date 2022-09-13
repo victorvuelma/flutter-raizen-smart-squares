@@ -95,160 +95,104 @@ class AppRoutes {
   static String initialRoute = splashScreen;
 
   static List<GetPage> pages = [
-    // GetPage(
-    //   name: resultadoExercicioScreen,
-    //   page: () => ResultadoExercicioScreen(),
-    //   bindings: [
-    //     ResultadoExercicioBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: localizacaoScreen,
-    //   page: () => LocalizacaoScreen(),
-    //   bindings: [
-    //     LocalizacaoBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: cadastroScreen,
-    //   page: () => CadastroScreen(),
-    //   bindings: [
-    //     CadastroBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: beneficiosScreen,
-    //   page: () => BeneficiosScreen(),
-    //   bindings: [
-    //     BeneficiosBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: testeScreen,
-    //   page: () => TesteScreen(),
-    //   bindings: [
-    //     TesteBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: telaPrincipalScreen,
-    //   page: () => TelaPrincipalScreen(),
-    //   bindings: [
-    //     TelaPrincipalBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: seleOBeneficioScreen,
-    //   page: () => SeleOBeneficioScreen(),
-    //   bindings: [
-    //     SeleOBeneficioBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: qrCodeThreeScreen,
-    //   page: () => QrCodeThreeScreen(),
-    //   bindings: [
-    //     QrCodeThreeBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: frameSixScreen,
-    //   page: () => FrameSixScreen(),
-    //   bindings: [
-    //     FrameSixBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: qrCodeTwoScreen,
-    //   page: () => QrCodeTwoScreen(),
-    //   bindings: [
-    //     QrCodeTwoBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: beneficioResgatadoScreen,
-    //   page: () => BeneficioResgatadoScreen(),
-    //   bindings: [
-    //     BeneficioResgatadoBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: seleOBeneficioOneScreen,
-    //   page: () => SeleOBeneficioOneScreen(),
-    //   bindings: [
-    //     SeleOBeneficioOneBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: iniciarExercicioScreen,
-    //   page: () => IniciarExercicioScreen(),
-    //   bindings: [
-    //     IniciarExercicioBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: seleOBeneficioTwoScreen,
-    //   page: () => SeleOBeneficioTwoScreen(),
-    //   bindings: [
-    //     SeleOBeneficioTwoBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: timerExercicioScreen,
-    //   page: () => TimerExercicioScreen(),
-    //   bindings: [
-    //     TimerExercicioBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: seleOBeneficioThreeScreen,
-    //   page: () => SeleOBeneficioThreeScreen(),
-    //   bindings: [
-    //     SeleOBeneficioThreeBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: impactosScreen,
-    //   page: () => ImpactosScreen(),
-    //   bindings: [
-    //     ImpactosBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: telaPrincipalOneScreen,
-    //   page: () => TelaPrincipalOneScreen(),
-    //   bindings: [
-    //     TelaPrincipalOneBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: qrCodeOneScreen,
-    //   page: () => QrCodeOneScreen(),
-    //   bindings: [
-    //     QrCodeOneBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: apresentaOAppTwoScreen,
-    //   page: () => ApresentaOAppTwoScreen(),
-    //   bindings: [
-    //     ApresentaOAppTwoBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: apresentaOAppThreeScreen,
-    //   page: () => ApresentaOAppThreeScreen(),
-    //   bindings: [
-    //     ApresentaOAppThreeBinding(),
-    //   ],
-    // ),
-    // GetPage(
-    //   name: appNavigationScreen,
-    //   page: () => AppNavigationScreen(),
-    //   bindings: [
-    //     AppNavigationBinding(),
-    //   ],
-    // ),
+    GetPage(
+      name: resultadoExercicioScreen,
+      page: () => ResultadoExercicioScreen(),
+      bindings: [
+        ResultadoExercicioBinding(),
+      ],
+    ),
+    GetPage(
+      name: localizacaoScreen,
+      page: () => LocalizacaoScreen(),
+      bindings: [
+        LocalizacaoBinding(),
+      ],
+    ),
+    GetPage(
+      name: signUpScreen,
+      page: () => CadastroScreen(),
+      bindings: [
+        CadastroBinding(),
+      ],
+    ),
+    GetPage(
+      name: beneficiosScreen,
+      page: () => BeneficiosScreen(),
+      bindings: [
+        BeneficiosBinding(),
+      ],
+    ),
+    GetPage(
+      name: seleOBeneficioScreen,
+      page: () => SeleOBeneficioScreen(),
+      bindings: [
+        SeleOBeneficioBinding(),
+      ],
+    ),
+    GetPage(
+      name: frameSixScreen,
+      page: () => FrameSixScreen(),
+      bindings: [
+        FrameSixBinding(),
+      ],
+    ),
+    GetPage(
+      name: beneficioResgatadoScreen,
+      page: () => BeneficioResgatadoScreen(),
+      bindings: [
+        BeneficioResgatadoBinding(),
+      ],
+    ),
+    GetPage(
+      name: seleOBeneficioOneScreen,
+      page: () => SeleOBeneficioOneScreen(),
+      bindings: [
+        SeleOBeneficioOneBinding(),
+      ],
+    ),
+    GetPage(
+      name: iniciarExercicioScreen,
+      page: () => IniciarExercicioScreen(),
+      bindings: [
+        IniciarExercicioBinding(),
+      ],
+    ),
+    GetPage(
+      name: seleOBeneficioTwoScreen,
+      page: () => SeleOBeneficioTwoScreen(),
+      bindings: [
+        SeleOBeneficioTwoBinding(),
+      ],
+    ),
+    GetPage(
+      name: timerExercicioScreen,
+      page: () => TimerExercicioScreen(),
+      bindings: [
+        TimerExercicioBinding(),
+      ],
+    ),
+    GetPage(
+      name: seleOBeneficioThreeScreen,
+      page: () => SeleOBeneficioThreeScreen(),
+      bindings: [
+        SeleOBeneficioThreeBinding(),
+      ],
+    ),
+    GetPage(
+      name: impactosScreen,
+      page: () => ImpactosScreen(),
+      bindings: [
+        ImpactosBinding(),
+      ],
+    ),
+    GetPage(
+      name: appNavigationScreen,
+      page: () => AppNavigationScreen(),
+      bindings: [
+        AppNavigationBinding(),
+      ],
+    ),
     GetPage(
       name: initialRoute,
       page: () => const SplashScreen(),

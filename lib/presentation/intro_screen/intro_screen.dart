@@ -11,11 +11,11 @@ class IntroScreen extends GetWidget<IntroController> {
     super.key,
   });
 
-  onTapSignUp() {
+  void onTapSignUp() {
     Get.toNamed(AppRoutes.signUpScreen);
   }
 
-  onTapLogin() {
+  void onTapLogin() {
     Get.toNamed(AppRoutes.loginScreen);
   }
 
@@ -26,7 +26,7 @@ class IntroScreen extends GetWidget<IntroController> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.all(32),
+            padding: const EdgeInsets.symmetric(vertical: 32),
             constraints: BoxConstraints(minHeight: context.height - 24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,23 +75,26 @@ class IntroScreen extends GetWidget<IntroController> {
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: onTapSignUp,
-                        style: AppStyle.btnElevatedPrimary,
-                        child: Text("msg_signup_now".tr),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: onTapSignUp,
+                          style: AppStyle.btnElevatedPrimary,
+                          child: Text("msg_signup_now".tr),
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 24),
-                    TextButton(
-                      onPressed: onTapLogin,
-                      style: AppStyle.btnTextTheme,
-                      child: Text("msg_signup_already".tr),
-                    )
-                  ],
+                      const SizedBox(height: 24),
+                      TextButton(
+                        onPressed: onTapLogin,
+                        style: AppStyle.btnTextTheme,
+                        child: Text("msg_signup_already".tr),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),

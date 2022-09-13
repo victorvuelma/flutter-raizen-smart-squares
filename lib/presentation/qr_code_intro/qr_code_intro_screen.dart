@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:lucide_icons/lucide_icons.dart';
@@ -7,14 +6,17 @@ import 'package:raizen_smart_squares/widgets/intro_step.dart';
 import 'controller/qr_code_intro_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:raizen_smart_squares/core/app_export.dart';
-import 'package:raizen_smart_squares/widgets/custom_button.dart';
 
 class QRCodeIntroScreen extends GetWidget<QRCodeIntroController> {
   const QRCodeIntroScreen({
     super.key,
   });
 
-  onTapQRCodeRead() {
+  void onTapGoBack() {
+    Get.back();
+  }
+
+  void onTapQRCodeRead() {
     Get.offNamed(AppRoutes.qrCodeScannerScreen);
   }
 
@@ -24,9 +26,12 @@ class QRCodeIntroScreen extends GetWidget<QRCodeIntroController> {
       appBar: AppBar(
         backgroundColor: ColorConstant.light00,
         shadowColor: Colors.transparent,
-        leading: const Icon(
-          LucideIcons.chevronLeft,
-          color: ColorConstant.purple800,
+        leading: IconButton(
+          onPressed: onTapGoBack,
+          icon: const Icon(
+            LucideIcons.chevronLeft,
+            color: ColorConstant.purple800,
+          ),
         ),
       ),
       backgroundColor: ColorConstant.light00,
@@ -35,16 +40,19 @@ class QRCodeIntroScreen extends GetWidget<QRCodeIntroController> {
           SingleChildScrollView(
             child: Container(
               constraints: BoxConstraints(minHeight: context.height - 80),
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'msg_qrcode_intro_title'.tr,
-                    style: AppStyle.txtBigTitle,
-                    textAlign: TextAlign.center,
+                  Container(
+                    margin: const EdgeInsets.all(8),
+                    child: Text(
+                      'msg_qrcode_intro_title'.tr,
+                      style: AppStyle.txtBigTitle,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 8),
                   CarouselSlider(
                     carouselController: controller.carouselController,
                     options: CarouselOptions(
@@ -87,7 +95,7 @@ class QRCodeIntroScreen extends GetWidget<QRCodeIntroController> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 160),
+                  const SizedBox(height: 192),
                 ],
               ),
             ),

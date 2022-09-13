@@ -11,7 +11,7 @@ class QRCodeScannerScreen extends GetWidget<QRCodeScannerController> {
     super.key,
   });
 
-  onTapGoBack() {
+  void onTapGoBack() {
     Get.back();
   }
 
@@ -21,16 +21,12 @@ class QRCodeScannerScreen extends GetWidget<QRCodeScannerController> {
       body: Stack(
         children: [
           MobileScanner(
-            allowDuplicates: true,
+            allowDuplicates: false,
             controller: controller.cameraController,
             onDetect: (barcode, args) {
-              if (barcode.type == BarcodeType.values) {}
-
-              if (barcode.rawValue == null) {
-                debugPrint('Failed to scan Barcode');
-              } else {
+              if (barcode.type == BarcodeType.text &&
+                  barcode.rawValue?.isNotEmpty == true) {
                 final String code = barcode.rawValue!;
-                debugPrint('Barcode found! $code');
               }
             },
           ),

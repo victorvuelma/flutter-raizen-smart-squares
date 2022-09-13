@@ -1,7 +1,13 @@
 import '/core/app_export.dart';
 
 class SplashController extends GetxController {
+  final AuthenticationManager _authenticationService;
+
   final nextPage = ''.obs;
+
+  SplashController({
+    required AuthenticationManager authenticationService,
+  }) : _authenticationService = authenticationService;
 
   @override
   void onInit() {
@@ -13,8 +19,13 @@ class SplashController extends GetxController {
   }
 
   Future<void> load() async {
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.wait([
+      _authenticationService.recoverFromStorage(),
+      Future.delayed(const Duration(seconds: 1)),
+    ]);
 
-    nextPage.value = AppRoutes.introScreen;
+    nextPage.value = _authenticationService.isAuthenticated
+        ? AppRoutes.mainScreen
+        : AppRoutes.introScreen;
   }
 }
