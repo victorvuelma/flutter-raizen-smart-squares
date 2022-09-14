@@ -1,7 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:raizen_smart_squares/core/app_export.dart';
+import 'package:raizen_smart_squares/data/repositories/activation/activation_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/authenticate/authenticate_repository.dart';
+import 'package:raizen_smart_squares/data/repositories/session/session_repository.dart';
 
 class CoreInjection {
   CoreInjection._();
@@ -24,6 +26,15 @@ class CoreInjection {
 
     Get.lazyPut<AuthenticateRepository>(
       () => AuthenticateRepository(Get.find<Dio>()),
+      fenix: true,
+    );
+
+    Get.lazyPut<ActivationRepository>(
+      () => ActivationRepository(Get.find<Dio>()),
+      fenix: true,
+    );
+    Get.lazyPut<SessionRepository>(
+      () => SessionRepository(Get.find<Dio>()),
       fenix: true,
     );
 
