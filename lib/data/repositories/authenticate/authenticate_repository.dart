@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:raizen_smart_squares/data/models/authenticate_request/authenticate_request_model.dart';
-import 'package:raizen_smart_squares/data/models/authenticate_response/authenticate_response_model.dart';
+import 'package:raizen_smart_squares/data/models/authenticate/authenticate_request_model.dart';
+import 'package:raizen_smart_squares/data/models/authenticate/authenticate_response_model.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'authenticate_repository.g.dart';

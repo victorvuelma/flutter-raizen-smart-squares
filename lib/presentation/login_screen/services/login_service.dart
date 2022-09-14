@@ -1,4 +1,4 @@
-import 'package:raizen_smart_squares/data/models/authenticate_request/authenticate_request_model.dart';
+import 'package:raizen_smart_squares/data/models/authenticate/authenticate_request_model.dart';
 import 'package:raizen_smart_squares/data/models/user_profile/user_profile_model.dart';
 import 'package:raizen_smart_squares/data/repositories/authenticate/authenticate_repository.dart';
 

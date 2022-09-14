@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:raizen_smart_squares/core/app_export.dart';
 import 'package:raizen_smart_squares/data/repositories/activation/activation_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/authenticate/authenticate_repository.dart';
+import 'package:raizen_smart_squares/data/repositories/offer/offer_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/session/session_repository.dart';
 
 class CoreInjection {
@@ -31,6 +32,10 @@ class CoreInjection {
 
     Get.lazyPut<ActivationRepository>(
       () => ActivationRepository(Get.find<Dio>()),
+      fenix: true,
+    );
+    Get.lazyPut<OfferRepository>(
+      () => OfferRepository(Get.find<Dio>()),
       fenix: true,
     );
     Get.lazyPut<SessionRepository>(
