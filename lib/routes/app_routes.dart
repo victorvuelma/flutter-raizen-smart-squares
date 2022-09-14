@@ -2,8 +2,8 @@ import 'package:raizen_smart_squares/presentation/qr_code_scanner/binding/qr_cod
 import 'package:raizen_smart_squares/presentation/qr_code_scanner/qr_code_scanner_screen.dart';
 import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/resultado_exercicio_screen.dart';
 import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/binding/resultado_exercicio_binding.dart';
-import 'package:raizen_smart_squares/presentation/localizacao_screen/localizacao_screen.dart';
-import 'package:raizen_smart_squares/presentation/localizacao_screen/binding/localizacao_binding.dart';
+import 'package:raizen_smart_squares/presentation/places_screen/places_screen.dart';
+import 'package:raizen_smart_squares/presentation/places_screen/binding/places_binding.dart';
 import 'package:raizen_smart_squares/presentation/cadastro_screen/cadastro_screen.dart';
 import 'package:raizen_smart_squares/presentation/cadastro_screen/binding/cadastro_binding.dart';
 import 'package:raizen_smart_squares/presentation/beneficios_screen/beneficios_screen.dart';
@@ -58,9 +58,9 @@ class AppRoutes {
 
   static String qrCodeScannerScreen = '/qr_code_scanner_screen';
 
-  static String resultadoExercicioScreen = '/resultado_exercicio_screen';
+  static String placesScreen = '/places_screen';
 
-  static String localizacaoScreen = '/localizacao_screen';
+  static String resultadoExercicioScreen = '/resultado_exercicio_screen';
 
   static String beneficiosScreen = '/beneficios_screen';
 
@@ -100,13 +100,6 @@ class AppRoutes {
       page: () => ResultadoExercicioScreen(),
       bindings: [
         ResultadoExercicioBinding(),
-      ],
-    ),
-    GetPage(
-      name: localizacaoScreen,
-      page: () => LocalizacaoScreen(),
-      bindings: [
-        LocalizacaoBinding(),
       ],
     ),
     GetPage(
@@ -233,6 +226,13 @@ class AppRoutes {
       page: () => const QRCodeScannerScreen(),
       bindings: [
         QRCodeScannerBinding(),
+      ],
+    ),
+    GetPage(
+      name: placesScreen,
+      page: () => PlacesScreen(),
+      bindings: [
+        PlacesBinding(),
       ],
     ),
   ];

@@ -295,11 +295,11 @@ class MainScreen extends GetWidget<MainController> {
   }
 
   onTapColumnvectorone() {
-    Get.toNamed(AppRoutes.localizacaoScreen);
+    Get.toNamed(AppRoutes.placesScreen);
   }
 
   onTapTxtSmartsquares() {
-    Get.toNamed(AppRoutes.localizacaoScreen);
+    Get.toNamed(AppRoutes.placesScreen);
   }
 
   onTapColumnminimize() {

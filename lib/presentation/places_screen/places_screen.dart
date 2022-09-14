@@ -1,11 +1,33 @@
-import 'controller/localizacao_controller.dart';
+import 'dart:async';
+
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+import 'controller/places_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:raizen_smart_squares/core/app_export.dart';
 import 'package:raizen_smart_squares/widgets/custom_button.dart';
 
-class LocalizacaoScreen extends GetWidget<LocalizacaoController> {
+class PlacesScreen extends GetWidget<PlacesController> {
+  PlacesScreen({
+    super.key,
+  });
+
+  static final CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(37.42796133580664, -122.085749655962),
+    zoom: 14.4746,
+  );
+
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      body: GoogleMap(
+        mapType: MapType.hybrid,
+        initialCameraPosition: _kGooglePlex,
+        onMapCreated: (GoogleMapController maps) =>
+            controller.mapsController.complete(maps),
+      ),
+    );
+
     return SafeArea(
         child: Scaffold(
             backgroundColor: ColorConstant.gray50,

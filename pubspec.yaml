@@ -42,6 +42,7 @@ dependencies:
   flutter_secure_storage: 6.0.0
   flutter_svg: 1.1.5
   get: 4.6.5
+  google_maps_flutter: ^2.2.0
   hive: 2.2.3
   hive_flutter: 1.1.0
   json_annotation: 4.6.0

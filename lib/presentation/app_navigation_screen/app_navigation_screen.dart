@@ -1295,7 +1295,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
   }
 
   onTapLocalizacao() {
-    Get.toNamed(AppRoutes.localizacaoScreen);
+    Get.toNamed(AppRoutes.placesScreen);
   }
 
   onTapCadastro() {
