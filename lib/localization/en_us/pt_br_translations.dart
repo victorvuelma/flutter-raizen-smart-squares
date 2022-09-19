@@ -27,6 +27,10 @@ final Map<String, String> ptBr = {
   "msg_qrcode_read_how":
       "Posicione o QRCode abaixo e aguarde. A leitura é automática.",
   "msg_places_navigate": "Traçar rota",
+  "msg_start_session_title": "Bicicleta localizada com sucesso!",
+  "msg_start_session_when_done":
+      "Quando estiver pronto, é só clicar no botão abaixo!",
+  "lbl_start_session_start": "Começar",
   // Generated
   'msg_descubra_todo_o':
       'Descubra todo o universo de possibilidades das Smart Squares em um só lugar!',

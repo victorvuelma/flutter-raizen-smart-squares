@@ -23,8 +23,9 @@ class QRCodeIntroScreen extends GetWidget<QRCodeIntroController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorConstant.lightBackground,
       appBar: AppBar(
-        backgroundColor: ColorConstant.light00,
+        backgroundColor: ColorConstant.lightBackground,
         shadowColor: Colors.transparent,
         leading: IconButton(
           onPressed: onTapGoBack,
@@ -34,7 +35,6 @@ class QRCodeIntroScreen extends GetWidget<QRCodeIntroController> {
           ),
         ),
       ),
-      backgroundColor: ColorConstant.light00,
       body: Stack(
         children: [
           SingleChildScrollView(

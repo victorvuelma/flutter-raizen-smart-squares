@@ -43,11 +43,15 @@ class QRCodeScannerController extends GetxController {
       await _sessionStartService.startSession(code);
 
       state.value = QRCodeScannerControllerState.success;
+
+      Get.offNamed(AppRoutes.sessionStartScreen);
     } on Error catch (_) {
       state.value = QRCodeScannerControllerState.failed;
 
       Asuka.showSnackBar(SnackBar(
         backgroundColor: Colors.transparent,
+        elevation: 0,
+        behavior: SnackBarBehavior.floating,
         content: AwesomeSnackbarContent(
           title: 'Ops',
           message:
@@ -60,6 +64,8 @@ class QRCodeScannerController extends GetxController {
 
       Asuka.showSnackBar(SnackBar(
         backgroundColor: Colors.transparent,
+        elevation: 0,
+        behavior: SnackBarBehavior.floating,
         content: AwesomeSnackbarContent(
           title: 'Ops',
           message:

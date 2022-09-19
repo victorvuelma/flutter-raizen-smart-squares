@@ -58,6 +58,9 @@ class LoginController extends GetxController {
       state.value = LoginControllerState.failed;
 
       Asuka.showSnackBar(SnackBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        behavior: SnackBarBehavior.floating,
         content: AwesomeSnackbarContent(
           title: 'Ops',
           message: 'Um erro ocorreu e não foi possível concluir a autenticação',
@@ -68,6 +71,9 @@ class LoginController extends GetxController {
       state.value = LoginControllerState.failed;
 
       Asuka.showSnackBar(SnackBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        behavior: SnackBarBehavior.floating,
         content: AwesomeSnackbarContent(
           title: 'Ops',
           message: 'Um erro ocorreu e não foi possível concluir a autenticação',

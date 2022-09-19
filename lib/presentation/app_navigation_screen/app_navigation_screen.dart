@@ -1346,7 +1346,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
   }
 
   onTapIniciarExercicio() {
-    Get.toNamed(AppRoutes.iniciarExercicioScreen);
+    Get.toNamed(AppRoutes.sessionStartScreen);
   }
 
   onTapSeleoBeneficioTwo() {

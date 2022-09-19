@@ -22,8 +22,8 @@ import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/ben
 import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/binding/beneficio_resgatado_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/sele_o_beneficio_one_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/binding/sele_o_beneficio_one_binding.dart';
-import 'package:raizen_smart_squares/presentation/iniciar_exercicio_screen/iniciar_exercicio_screen.dart';
-import 'package:raizen_smart_squares/presentation/iniciar_exercicio_screen/binding/iniciar_exercicio_binding.dart';
+import 'package:raizen_smart_squares/presentation/session_start_screen/session_start_screen.dart';
+import 'package:raizen_smart_squares/presentation/session_start_screen/binding/session_start_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_two_screen/sele_o_beneficio_two_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_two_screen/binding/sele_o_beneficio_two_binding.dart';
 import 'package:raizen_smart_squares/presentation/timer_exercicio_screen/timer_exercicio_screen.dart';
@@ -60,6 +60,8 @@ class AppRoutes {
 
   static String placesScreen = '/places_screen';
 
+  static String sessionStartScreen = '/session_start_screen';
+
   static String resultadoExercicioScreen = '/resultado_exercicio_screen';
 
   static String beneficiosScreen = '/beneficios_screen';
@@ -73,8 +75,6 @@ class AppRoutes {
   static String beneficioResgatadoScreen = '/beneficio_resgatado_screen';
 
   static String seleOBeneficioOneScreen = '/sele_o_beneficio_one_screen';
-
-  static String iniciarExercicioScreen = '/iniciar_exercicio_screen';
 
   static String seleOBeneficioTwoScreen = '/sele_o_beneficio_two_screen';
 
@@ -145,13 +145,6 @@ class AppRoutes {
       ],
     ),
     GetPage(
-      name: iniciarExercicioScreen,
-      page: () => IniciarExercicioScreen(),
-      bindings: [
-        IniciarExercicioBinding(),
-      ],
-    ),
-    GetPage(
       name: seleOBeneficioTwoScreen,
       page: () => SeleOBeneficioTwoScreen(),
       bindings: [
@@ -189,51 +182,42 @@ class AppRoutes {
     GetPage(
       name: initialRoute,
       page: () => const SplashScreen(),
-      bindings: [
-        SplashBinding(),
-      ],
+      bindings: [SplashBinding()],
     ),
     GetPage(
       name: introScreen,
       page: () => const IntroScreen(),
-      bindings: [
-        IntroBinding(),
-      ],
+      bindings: [IntroBinding()],
     ),
     GetPage(
       name: loginScreen,
       page: () => const LoginScreen(),
-      bindings: [
-        LoginBinding(),
-      ],
+      bindings: [LoginBinding()],
     ),
     GetPage(
       name: mainScreen,
       page: () => const MainScreen(),
-      bindings: [
-        MainBinding(),
-      ],
+      bindings: [MainBinding()],
     ),
     GetPage(
       name: qrCodeIntroScreen,
       page: () => const QRCodeIntroScreen(),
-      bindings: [
-        QRCodeIntroBinding(),
-      ],
+      bindings: [QRCodeIntroBinding()],
     ),
     GetPage(
       name: qrCodeScannerScreen,
       page: () => const QRCodeScannerScreen(),
-      bindings: [
-        QRCodeScannerBinding(),
-      ],
+      bindings: [QRCodeScannerBinding()],
     ),
     GetPage(
       name: placesScreen,
-      page: () => PlacesScreen(),
-      bindings: [
-        PlacesBinding(),
-      ],
+      page: () => const PlacesScreen(),
+      bindings: [PlacesBinding()],
+    ),
+    GetPage(
+      name: sessionStartScreen,
+      page: () => const SessionStartScreen(),
+      bindings: [SessionStartBinding()],
     ),
   ];
 }
