@@ -42,6 +42,12 @@ class AppStyle {
     fontSize: 16,
   );
 
+  static const TextStyle txtSmallTitle = TextStyle(
+    color: ColorConstant.purple800,
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+  );
+
   static const TextStyle txtMediumTitle = TextStyle(
     color: ColorConstant.purple800,
     fontWeight: FontWeight.w600,
