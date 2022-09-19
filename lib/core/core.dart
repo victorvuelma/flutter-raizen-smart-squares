@@ -22,7 +22,18 @@ class CoreInjection {
     NetworkInfo networkInfo = NetworkInfo(connectivity);
     Get.put<NetworkInfo>(networkInfo, permanent: true);
 
-    ApiClient apiClient = ApiClient();
+    Get.lazyPut<AuthenticationManager>(
+      () => AuthenticationManager(
+        internalStorage: Get.find<InternalStorage>(),
+        secureStorage: Get.find<SecureStorage>(),
+      ),
+      fenix: true,
+    );
+
+    ApiClient apiClient = ApiClient(
+      authenticationManager: Get.find<AuthenticationManager>(),
+    );
+    apiClient.init();
     Get.put<ApiClient>(apiClient, permanent: true);
     Get.put<Dio>(apiClient.dio, permanent: true);
 
@@ -48,14 +59,6 @@ class CoreInjection {
 
     Get.lazyPut<PlaceRepository>(
       () => PlaceRepository(Get.find<Dio>()),
-      fenix: true,
-    );
-
-    Get.lazyPut<AuthenticationManager>(
-      () => AuthenticationManager(
-        internalStorage: Get.find<InternalStorage>(),
-        secureStorage: Get.find<SecureStorage>(),
-      ),
       fenix: true,
     );
   }

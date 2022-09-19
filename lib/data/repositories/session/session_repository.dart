@@ -11,7 +11,7 @@ abstract class SessionRepository {
     String baseUrl,
   }) = _SessionRepository;
 
-  @POST("/session/:bicycleCode")
+  @POST("/session/{bicycleCode}")
   Future<SessionModel> startSession({
     @Path("bicycleCode") required String bicycleCode,
   });

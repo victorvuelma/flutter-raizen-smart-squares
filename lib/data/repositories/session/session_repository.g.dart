@@ -32,7 +32,7 @@ class _SessionRepository implements SessionRepository {
     )
             .compose(
               _dio.options,
-              '/session/:bicycleCode',
+              '/session/${bicycleCode}',
               queryParameters: queryParameters,
               data: _data,
             )

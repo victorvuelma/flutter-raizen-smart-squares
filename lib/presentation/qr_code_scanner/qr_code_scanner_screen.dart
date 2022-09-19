@@ -15,6 +15,15 @@ class QRCodeScannerScreen extends GetWidget<QRCodeScannerController> {
     Get.back();
   }
 
+  void onScannerDetect(Barcode barcode) {
+    if (barcode.type == BarcodeType.text &&
+        barcode.rawValue?.isNotEmpty == true) {
+      final String code = barcode.rawValue!;
+
+      controller.onScannerRead(code);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,12 +32,7 @@ class QRCodeScannerScreen extends GetWidget<QRCodeScannerController> {
           MobileScanner(
             allowDuplicates: false,
             controller: controller.cameraController,
-            onDetect: (barcode, args) {
-              if (barcode.type == BarcodeType.text &&
-                  barcode.rawValue?.isNotEmpty == true) {
-                final String code = barcode.rawValue!;
-              }
-            },
+            onDetect: (barcode, _) => onScannerDetect(barcode),
           ),
           Positioned(
             top: 32,
