@@ -26,8 +26,8 @@ import 'package:raizen_smart_squares/presentation/session_start_screen/session_s
 import 'package:raizen_smart_squares/presentation/session_start_screen/binding/session_start_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_two_screen/sele_o_beneficio_two_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_two_screen/binding/sele_o_beneficio_two_binding.dart';
-import 'package:raizen_smart_squares/presentation/timer_exercicio_screen/timer_exercicio_screen.dart';
-import 'package:raizen_smart_squares/presentation/timer_exercicio_screen/binding/timer_exercicio_binding.dart';
+import 'package:raizen_smart_squares/presentation/session_timer/session_timer_screen.dart';
+import 'package:raizen_smart_squares/presentation/session_timer/binding/session_timer_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_three_screen/sele_o_beneficio_three_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_three_screen/binding/sele_o_beneficio_three_binding.dart';
 import 'package:raizen_smart_squares/presentation/impactos_screen/impactos_screen.dart';
@@ -62,6 +62,8 @@ class AppRoutes {
 
   static String sessionStartScreen = '/session_start_screen';
 
+  static String sessionTimerScreen = '/session_timer_screen';
+
   static String resultadoExercicioScreen = '/resultado_exercicio_screen';
 
   static String beneficiosScreen = '/beneficios_screen';
@@ -77,8 +79,6 @@ class AppRoutes {
   static String seleOBeneficioOneScreen = '/sele_o_beneficio_one_screen';
 
   static String seleOBeneficioTwoScreen = '/sele_o_beneficio_two_screen';
-
-  static String timerExercicioScreen = '/timer_exercicio_screen';
 
   static String seleOBeneficioThreeScreen = '/sele_o_beneficio_three_screen';
 
@@ -152,13 +152,6 @@ class AppRoutes {
       ],
     ),
     GetPage(
-      name: timerExercicioScreen,
-      page: () => TimerExercicioScreen(),
-      bindings: [
-        TimerExercicioBinding(),
-      ],
-    ),
-    GetPage(
       name: seleOBeneficioThreeScreen,
       page: () => SeleOBeneficioThreeScreen(),
       bindings: [
@@ -218,6 +211,11 @@ class AppRoutes {
       name: sessionStartScreen,
       page: () => const SessionStartScreen(),
       bindings: [SessionStartBinding()],
+    ),
+    GetPage(
+      name: sessionTimerScreen,
+      page: () => const SessionTimerScreen(),
+      bindings: [SessionTimerBinding()],
     ),
   ];
 }

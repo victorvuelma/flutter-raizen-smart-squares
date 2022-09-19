@@ -14,7 +14,7 @@ class SessionStartScreen extends GetWidget<SessionStartController> {
   }
 
   void onTapStart() {
-    Get.offNamed(AppRoutes.timerExercicioScreen);
+    Get.offNamed(AppRoutes.sessionTimerScreen);
   }
 
   @override

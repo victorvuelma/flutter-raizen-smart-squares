@@ -1354,7 +1354,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
   }
 
   onTapTimerExercicio() {
-    Get.toNamed(AppRoutes.timerExercicioScreen);
+    Get.toNamed(AppRoutes.sessionTimerScreen);
   }
 
   onTapSeleoBeneficioThree() {

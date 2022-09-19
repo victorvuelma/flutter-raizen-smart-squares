@@ -31,6 +31,9 @@ final Map<String, String> ptBr = {
   "msg_start_session_when_done":
       "Quando estiver pronto, é só clicar no botão abaixo!",
   "lbl_start_session_start": "Começar",
+  "msg_start_session_to_end":
+      "Quando quiser finalizar, é só clicar no botão abaixo! ",
+  "lbl_start_session_end": "Finalizar",
   // Generated
   'msg_descubra_todo_o':
       'Descubra todo o universo de possibilidades das Smart Squares em um só lugar!',
