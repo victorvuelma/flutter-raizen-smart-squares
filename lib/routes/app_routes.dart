@@ -1,5 +1,5 @@
-import 'package:raizen_smart_squares/presentation/qr_code_scanner/binding/qr_code_scanner_binding.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_scanner/qr_code_scanner_screen.dart';
+import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/binding/qr_code_scanner_binding.dart';
+import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/qr_code_scanner_screen.dart';
 import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/resultado_exercicio_screen.dart';
 import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/binding/resultado_exercicio_binding.dart';
 import 'package:raizen_smart_squares/presentation/places_screen/places_screen.dart';
@@ -32,8 +32,8 @@ import 'package:raizen_smart_squares/presentation/sele_o_beneficio_three_screen/
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_three_screen/binding/sele_o_beneficio_three_binding.dart';
 import 'package:raizen_smart_squares/presentation/impactos_screen/impactos_screen.dart';
 import 'package:raizen_smart_squares/presentation/impactos_screen/binding/impactos_binding.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_intro/qr_code_intro_screen.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_intro/binding/qr_code_intro_binding.dart';
+import 'package:raizen_smart_squares/presentation/qr_code_intro_screen/qr_code_intro_screen.dart';
+import 'package:raizen_smart_squares/presentation/qr_code_intro_screen/binding/qr_code_intro_binding.dart';
 import 'package:raizen_smart_squares/presentation/intro_screen/intro_screen.dart';
 import 'package:raizen_smart_squares/presentation/intro_screen/binding/intro_binding.dart';
 

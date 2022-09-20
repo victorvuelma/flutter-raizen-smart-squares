@@ -3,7 +3,7 @@ import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:raizen_smart_squares/presentation/qr_code_scanner/services/serssion_start_service.dart';
+import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/services/serssion_start_service.dart';
 
 import '/core/app_export.dart';
 
