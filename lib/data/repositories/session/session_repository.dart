@@ -17,5 +17,5 @@ abstract class SessionRepository {
   });
 
   @DELETE("/session")
-  Future<SessionModel> endSession();
+  Future<void> endSession();
 }

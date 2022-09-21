@@ -1,7 +1,7 @@
-import 'package:asuka/asuka.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:dio/dio.dart';
 import 'package:raizen_smart_squares/presentation/login_screen/services/login_service.dart';
+import 'package:raizen_smart_squares/widgets/snackbar.dart';
 
 import '/core/app_export.dart';
 import 'package:flutter/material.dart';
@@ -57,29 +57,23 @@ class LoginController extends GetxController {
     } on Error catch (_) {
       state.value = LoginControllerState.failed;
 
-      Asuka.showSnackBar(SnackBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        behavior: SnackBarBehavior.floating,
-        content: AwesomeSnackbarContent(
+      showAwesomeSnackbar(
+        AwesomeSnackbarContent(
           title: 'Ops',
           message: 'Um erro ocorreu e não foi possível concluir a autenticação',
           contentType: ContentType.failure,
         ),
-      ));
+      );
     } on DioError catch (_) {
       state.value = LoginControllerState.failed;
 
-      Asuka.showSnackBar(SnackBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        behavior: SnackBarBehavior.floating,
-        content: AwesomeSnackbarContent(
+      showAwesomeSnackbar(
+        AwesomeSnackbarContent(
           title: 'Ops',
           message: 'Um erro ocorreu e não foi possível concluir a autenticação',
           contentType: ContentType.failure,
         ),
-      ));
+      );
     }
   }
 }

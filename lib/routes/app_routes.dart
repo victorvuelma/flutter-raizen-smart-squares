@@ -1,7 +1,7 @@
 import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/binding/qr_code_scanner_binding.dart';
 import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/qr_code_scanner_screen.dart';
-import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/resultado_exercicio_screen.dart';
-import 'package:raizen_smart_squares/presentation/resultado_exercicio_screen/binding/resultado_exercicio_binding.dart';
+import 'package:raizen_smart_squares/presentation/session_result_screen/session_result_screen.dart';
+import 'package:raizen_smart_squares/presentation/session_result_screen/binding/session_result_binding.dart';
 import 'package:raizen_smart_squares/presentation/places_screen/places_screen.dart';
 import 'package:raizen_smart_squares/presentation/places_screen/binding/places_binding.dart';
 import 'package:raizen_smart_squares/presentation/cadastro_screen/cadastro_screen.dart';
@@ -64,7 +64,7 @@ class AppRoutes {
 
   static String sessionTimerScreen = '/session_timer_screen';
 
-  static String resultadoExercicioScreen = '/resultado_exercicio_screen';
+  static String sessionResultScreen = '/session_result_screen';
 
   static String beneficiosScreen = '/beneficios_screen';
 
@@ -95,13 +95,6 @@ class AppRoutes {
   static String initialRoute = splashScreen;
 
   static List<GetPage> pages = [
-    GetPage(
-      name: resultadoExercicioScreen,
-      page: () => ResultadoExercicioScreen(),
-      bindings: [
-        ResultadoExercicioBinding(),
-      ],
-    ),
     GetPage(
       name: signUpScreen,
       page: () => CadastroScreen(),
@@ -216,6 +209,11 @@ class AppRoutes {
       name: sessionTimerScreen,
       page: () => const SessionTimerScreen(),
       bindings: [SessionTimerBinding()],
+    ),
+    GetPage(
+      name: sessionResultScreen,
+      page: () => const SessionResultScreen(),
+      bindings: [SessionResultBinding()],
     ),
   ];
 }

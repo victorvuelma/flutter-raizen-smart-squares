@@ -1,5 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:raizen_smart_squares/core/app_export.dart';
 import 'package:raizen_smart_squares/data/models/user_profile/user_profile_model.dart';
 
@@ -26,7 +27,7 @@ class AuthenticationManager {
 
   Future<void> recoverFromStorage() async {
     final token = await _secureStorage.get(ACCESS_TOKEN_KEY);
-    if (token?.isNotEmpty == true) {
+    if (isValidToken(token)) {
       final profile = userProfileBox.get(USER_PROFILE_KEY);
 
       if (profile != null) {
@@ -57,5 +58,9 @@ class AuthenticationManager {
 
     accessToken = null;
     userProfile = null;
+  }
+
+  bool isValidToken(String? token) {
+    return token?.isNotEmpty == true && !JwtDecoder.isExpired(token!);
   }
 }

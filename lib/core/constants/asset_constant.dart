@@ -13,6 +13,8 @@ class AssetConstant {
   static String imgIntroQRCodeStepThird =
       'assets/images/intro_qrcode_steps_third.png';
 
+  static String imgSessionResult = 'assets/images/session_result.png';
+
   static String imgVectorLightGreen400 =
       'assets/images/img_vector_light_green_400.svg';
 

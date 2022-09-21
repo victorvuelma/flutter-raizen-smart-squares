@@ -1,9 +1,8 @@
-import 'package:asuka/asuka.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/services/serssion_start_service.dart';
+import 'package:raizen_smart_squares/widgets/snackbar.dart';
 
 import '/core/app_export.dart';
 
@@ -48,31 +47,25 @@ class QRCodeScannerController extends GetxController {
     } on Error catch (_) {
       state.value = QRCodeScannerControllerState.failed;
 
-      Asuka.showSnackBar(SnackBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        behavior: SnackBarBehavior.floating,
-        content: AwesomeSnackbarContent(
+      showAwesomeSnackbar(
+        AwesomeSnackbarContent(
           title: 'Ops',
           message:
               'Não foi possível iniciar sua sessão, tente novamente mais tarde.',
           contentType: ContentType.failure,
         ),
-      ));
+      );
     } on DioError catch (_) {
       state.value = QRCodeScannerControllerState.failed;
 
-      Asuka.showSnackBar(SnackBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        behavior: SnackBarBehavior.floating,
-        content: AwesomeSnackbarContent(
+      showAwesomeSnackbar(
+        AwesomeSnackbarContent(
           title: 'Ops',
           message:
               'Não foi possível iniciar sua sessão, tente novamente mais tarde.',
           contentType: ContentType.failure,
         ),
-      ));
+      );
     }
   }
 }
