@@ -1303,7 +1303,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
   }
 
   onTapBeneficios() {
-    Get.toNamed(AppRoutes.beneficiosScreen);
+    Get.toNamed(AppRoutes.benefitsScren);
   }
 
   onTapTeste() {

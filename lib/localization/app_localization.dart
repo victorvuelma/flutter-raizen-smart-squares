@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'en_us/pt_br_translations.dart';
+import 'pt_br/pt_br_translations.dart';
 
 class AppLocalization extends Translations {
   @override

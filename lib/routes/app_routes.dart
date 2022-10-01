@@ -6,8 +6,8 @@ import 'package:raizen_smart_squares/presentation/places_screen/places_screen.da
 import 'package:raizen_smart_squares/presentation/places_screen/binding/places_binding.dart';
 import 'package:raizen_smart_squares/presentation/cadastro_screen/cadastro_screen.dart';
 import 'package:raizen_smart_squares/presentation/cadastro_screen/binding/cadastro_binding.dart';
-import 'package:raizen_smart_squares/presentation/beneficios_screen/beneficios_screen.dart';
-import 'package:raizen_smart_squares/presentation/beneficios_screen/binding/beneficios_binding.dart';
+import 'package:raizen_smart_squares/presentation/benefits_screen/benefits_screen.dart';
+import 'package:raizen_smart_squares/presentation/benefits_screen/binding/benefits_binding.dart';
 import 'package:raizen_smart_squares/presentation/splash_screen/binding/splash_binding.dart';
 import 'package:raizen_smart_squares/presentation/splash_screen/splash_screen.dart';
 import 'package:raizen_smart_squares/presentation/main_screen/main_screen.dart';
@@ -66,7 +66,7 @@ class AppRoutes {
 
   static String sessionResultScreen = '/session_result_screen';
 
-  static String beneficiosScreen = '/beneficios_screen';
+  static String benefitsScren = '/benefits_screen';
 
   static String testeScreen = '/teste_screen';
 
@@ -100,13 +100,6 @@ class AppRoutes {
       page: () => CadastroScreen(),
       bindings: [
         CadastroBinding(),
-      ],
-    ),
-    GetPage(
-      name: beneficiosScreen,
-      page: () => BeneficiosScreen(),
-      bindings: [
-        BeneficiosBinding(),
       ],
     ),
     GetPage(
@@ -214,6 +207,11 @@ class AppRoutes {
       name: sessionResultScreen,
       page: () => const SessionResultScreen(),
       bindings: [SessionResultBinding()],
+    ),
+    GetPage(
+      name: benefitsScren,
+      page: () => BenefitsScreen(),
+      bindings: [BenefitsBinding()],
     ),
   ];
 }

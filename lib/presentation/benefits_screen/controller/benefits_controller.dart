@@ -1,18 +1,18 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:dio/dio.dart';
-import 'package:raizen_smart_squares/presentation/main_screen/services/main_points_service.dart';
+import 'package:raizen_smart_squares/presentation/benefits_screen/services/benefits_points_service.dart';
 import 'package:raizen_smart_squares/widgets/snackbar.dart';
 
 import '/core/app_export.dart';
 
-class MainController extends GetxController {
-  final MainPointsService _mainPointsService;
+class BenefitsController extends GetxController {
+  final BenefitsPointsService _benefitsPointsService;
 
   final RxInt points = RxInt(0);
 
-  MainController({
-    required MainPointsService mainPointsService,
-  }) : _mainPointsService = mainPointsService;
+  BenefitsController({
+    required BenefitsPointsService benefitsPointsService,
+  }) : _benefitsPointsService = benefitsPointsService;
 
   @override
   void onInit() {
@@ -23,7 +23,7 @@ class MainController extends GetxController {
 
   Future<void> getPoints() async {
     try {
-      final customerPoints = await _mainPointsService.getPoints();
+      final customerPoints = await _benefitsPointsService.getPoints();
 
       points.value = customerPoints;
     } on Error catch (_) {

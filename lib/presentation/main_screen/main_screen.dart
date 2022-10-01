@@ -27,7 +27,7 @@ class MainScreen extends GetWidget<MainController> {
   }
 
   onTapBenefits() {
-    Get.toNamed(AppRoutes.beneficiosScreen);
+    Get.toNamed(AppRoutes.benefitsScren);
   }
 
   @override
@@ -117,17 +117,19 @@ class MainScreen extends GetWidget<MainController> {
                                   svgPath: AssetConstant.imgRoots,
                                 ),
                                 const SizedBox(width: 8),
-                                Text(
-                                  "lbl_total_points".trParams(
-                                    {
-                                      "amount":
-                                          controller.points.value.toString(),
-                                      "pt": controller.points.value == 1
-                                          ? "lbl_point".tr
-                                          : "lbl_points".tr,
-                                    },
-                                  ).toUpperCase(),
-                                  style: AppStyle.txtMediumTitle,
+                                Obx(
+                                  () => Text(
+                                    "lbl_total_points".trParams(
+                                      {
+                                        "amount":
+                                            controller.points.value.toString(),
+                                        "pt": controller.points.value == 1
+                                            ? "lbl_point".tr
+                                            : "lbl_points".tr,
+                                      },
+                                    ).toUpperCase(),
+                                    style: AppStyle.txtMediumTitle,
+                                  ),
                                 ),
                               ],
                             )

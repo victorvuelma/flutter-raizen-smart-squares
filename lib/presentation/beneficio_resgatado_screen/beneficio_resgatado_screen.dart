@@ -73,6 +73,6 @@ class BeneficioResgatadoScreen extends GetWidget<BeneficioResgatadoController> {
   }
 
   onTapBtnOk() {
-    Get.toNamed(AppRoutes.beneficiosScreen);
+    Get.toNamed(AppRoutes.benefitsScren);
   }
 }
