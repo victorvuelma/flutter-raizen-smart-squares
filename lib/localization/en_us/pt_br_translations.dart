@@ -41,6 +41,12 @@ final Map<String, String> ptBr = {
   "lbl_point": "Raiz",
   "lbl_points": "Raízes",
   "msg_result_session_win": "+ @amount @pt para sua conta!",
+  "lbl_main_use_points": "Trocar pontos",
+  "lbl_main_total_points": "Saldo total:",
+  "lbl_total_points": "@amount @pt",
+  "lbl_main_places": "Smart Squares",
+  "lbl_main_benefits": "Benefícios",
+  "lbl_main_impacts": "Impactos",
   // Generated
   'msg_descubra_todo_o':
       'Descubra todo o universo de possibilidades das Smart Squares em um só lugar!',

@@ -9,10 +9,7 @@ part of 'offer_repository.dart';
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
 class _OfferRepository implements OfferRepository {
-  _OfferRepository(
-    this._dio, {
-    this.baseUrl,
-  });
+  _OfferRepository(this._dio, {this.baseUrl});
 
   final Dio _dio;
 
@@ -24,19 +21,12 @@ class _OfferRepository implements OfferRepository {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<OfferModel>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/offer',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<OfferModel>>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/offer',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
         .map((dynamic i) => OfferModel.fromJson(i as Map<String, dynamic>))
         .toList();

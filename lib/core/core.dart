@@ -4,6 +4,7 @@ import 'package:raizen_smart_squares/core/app_export.dart';
 import 'package:raizen_smart_squares/data/api/io_client.dart';
 import 'package:raizen_smart_squares/data/repositories/activation/activation_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/authenticate/authenticate_repository.dart';
+import 'package:raizen_smart_squares/data/repositories/customer/customer_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/offer/offer_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/place/place_repository.dart';
 import 'package:raizen_smart_squares/data/repositories/session/session_repository.dart';
@@ -52,6 +53,11 @@ class CoreInjection {
 
     Get.lazyPut<ActivationRepository>(
       () => ActivationRepository(Get.find<Dio>()),
+      fenix: true,
+    );
+
+    Get.lazyPut<CustomerRepository>(
+      () => CustomerRepository(Get.find<Dio>()),
       fenix: true,
     );
 

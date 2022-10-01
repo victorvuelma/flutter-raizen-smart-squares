@@ -1,6 +1,9 @@
 class AssetConstant {
   static String imgLogo = 'assets/images/logo.svg';
-  static String imgQrcode = 'assets/images/img_qrcode.svg';
+
+  static String imgRoots = 'assets/images/roots.svg';
+
+  static String imgMainBanner = 'assets/images/main_banner.png';
 
   static String imgIntroStepFirst = 'assets/images/intro_steps_first.png';
   static String imgIntroStepSecond = 'assets/images/intro_steps_second.png';
@@ -14,6 +17,8 @@ class AssetConstant {
       'assets/images/intro_qrcode_steps_third.png';
 
   static String imgSessionResult = 'assets/images/session_result.png';
+
+  static String imgQrcode = 'assets/images/img_qrcode.svg';
 
   static String imgVectorLightGreen400 =
       'assets/images/img_vector_light_green_400.svg';

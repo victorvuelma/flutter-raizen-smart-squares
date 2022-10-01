@@ -11,6 +11,7 @@ class ColorConstant {
   static const Color light00 = Color(0xFFFFFFFF);
 
   static const Color light10 = Color(0xFFFBFBFB);
+  static const Color light50 = Color(0xFFF2F2F2);
 
   static const Color lightBackground = light10;
 
