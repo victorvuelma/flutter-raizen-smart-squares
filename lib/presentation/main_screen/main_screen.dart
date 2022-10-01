@@ -99,50 +99,48 @@ class MainScreen extends GetWidget<MainController> {
               ),
               Padding(
                 padding: const EdgeInsets.all(24),
-                child: Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "lbl_main_total_points".tr,
-                              style: AppStyle.txtSmallTitle,
-                            ),
-                            const SizedBox(height: 16),
-                            Row(
-                              children: [
-                                ImageView(
-                                  svgPath: AssetConstant.imgRoots,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "lbl_main_total_points".tr,
+                            style: AppStyle.txtSmallTitle,
+                          ),
+                          const SizedBox(height: 16),
+                          Row(
+                            children: [
+                              ImageView(
+                                svgPath: AssetConstant.imgRoots,
+                              ),
+                              const SizedBox(width: 8),
+                              Obx(
+                                () => Text(
+                                  "lbl_total_points".trParams(
+                                    {
+                                      "amount":
+                                          controller.points.value.toString(),
+                                      "pt": controller.points.value == 1
+                                          ? "lbl_point".tr
+                                          : "lbl_points".tr,
+                                    },
+                                  ).toUpperCase(),
+                                  style: AppStyle.txtMediumTitle,
                                 ),
-                                const SizedBox(width: 8),
-                                Obx(
-                                  () => Text(
-                                    "lbl_total_points".trParams(
-                                      {
-                                        "amount":
-                                            controller.points.value.toString(),
-                                        "pt": controller.points.value == 1
-                                            ? "lbl_point".tr
-                                            : "lbl_points".tr,
-                                      },
-                                    ).toUpperCase(),
-                                    style: AppStyle.txtMediumTitle,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
-                      ElevatedButton(
-                        onPressed: onTapBenefits,
-                        style: AppStyle.btnElevatedGreen,
-                        child: Text('lbl_main_use_points'.tr),
-                      ),
-                    ],
-                  ),
+                    ),
+                    ElevatedButton(
+                      onPressed: onTapBenefits,
+                      style: AppStyle.btnElevatedGreen,
+                      child: Text('lbl_main_use_points'.tr),
+                    ),
+                  ],
                 ),
               ),
               const Divider(),

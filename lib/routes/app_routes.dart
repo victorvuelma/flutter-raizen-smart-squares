@@ -16,8 +16,6 @@ import 'package:raizen_smart_squares/presentation/login_screen/login_screen.dart
 import 'package:raizen_smart_squares/presentation/login_screen/binding/login_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/sele_o_beneficio_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/binding/sele_o_beneficio_binding.dart';
-import 'package:raizen_smart_squares/presentation/frame_six_screen/frame_six_screen.dart';
-import 'package:raizen_smart_squares/presentation/frame_six_screen/binding/frame_six_binding.dart';
 import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/beneficio_resgatado_screen.dart';
 import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/binding/beneficio_resgatado_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/sele_o_beneficio_one_screen.dart';
@@ -36,9 +34,6 @@ import 'package:raizen_smart_squares/presentation/qr_code_intro_screen/qr_code_i
 import 'package:raizen_smart_squares/presentation/qr_code_intro_screen/binding/qr_code_intro_binding.dart';
 import 'package:raizen_smart_squares/presentation/intro_screen/intro_screen.dart';
 import 'package:raizen_smart_squares/presentation/intro_screen/binding/intro_binding.dart';
-
-import 'package:raizen_smart_squares/presentation/app_navigation_screen/app_navigation_screen.dart';
-import 'package:raizen_smart_squares/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
@@ -110,13 +105,6 @@ class AppRoutes {
       ],
     ),
     GetPage(
-      name: frameSixScreen,
-      page: () => FrameSixScreen(),
-      bindings: [
-        FrameSixBinding(),
-      ],
-    ),
-    GetPage(
       name: beneficioResgatadoScreen,
       page: () => BeneficioResgatadoScreen(),
       bindings: [
@@ -149,13 +137,6 @@ class AppRoutes {
       page: () => ImpactosScreen(),
       bindings: [
         ImpactosBinding(),
-      ],
-    ),
-    GetPage(
-      name: appNavigationScreen,
-      page: () => AppNavigationScreen(),
-      bindings: [
-        AppNavigationBinding(),
       ],
     ),
     GetPage(
@@ -210,7 +191,7 @@ class AppRoutes {
     ),
     GetPage(
       name: benefitsScren,
-      page: () => BenefitsScreen(),
+      page: () => const BenefitsScreen(),
       bindings: [BenefitsBinding()],
     ),
   ];

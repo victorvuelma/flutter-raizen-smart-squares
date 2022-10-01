@@ -18,59 +18,58 @@ class BenefitsScreen extends GetWidget<BenefitsController> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
-              width: context.width,
-              decoration: const BoxDecoration(
-                color: ColorConstant.light10,
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(48),
-                ),
+            width: context.width,
+            decoration: const BoxDecoration(
+              color: ColorConstant.light10,
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(48),
               ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(24),
-                    child: Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "lbl_main_total_points".tr,
-                                  style: AppStyle.txtSmallTitle,
-                                ),
-                                const SizedBox(height: 16),
-                                Row(
-                                  children: [
-                                    ImageView(
-                                      svgPath: AssetConstant.imgRoots,
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Obx(() => Text(
-                                          "lbl_total_points".trParams(
-                                            {
-                                              "amount": controller.points.value
-                                                  .toString(),
-                                              "pt": controller.points.value == 1
-                                                  ? "lbl_point".tr
-                                                  : "lbl_points".tr,
-                                            },
-                                          ).toUpperCase(),
-                                          style: AppStyle.txtMediumTitle,
-                                        )),
-                                  ],
-                                )
-                              ],
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "lbl_main_total_points".tr,
+                              style: AppStyle.txtSmallTitle,
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 16),
+                            Row(
+                              children: [
+                                ImageView(
+                                  svgPath: AssetConstant.imgRoots,
+                                ),
+                                const SizedBox(width: 8),
+                                Obx(() => Text(
+                                      "lbl_total_points".trParams(
+                                        {
+                                          "amount": controller.points.value
+                                              .toString(),
+                                          "pt": controller.points.value == 1
+                                              ? "lbl_point".tr
+                                              : "lbl_points".tr,
+                                        },
+                                      ).toUpperCase(),
+                                      style: AppStyle.txtMediumTitle,
+                                    )),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                  const Divider(),
-                ],
-              )),
+                ),
+                const Divider(),
+              ],
+            ),
+          ),
         ),
       ),
     );
