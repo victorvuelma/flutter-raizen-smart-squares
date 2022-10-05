@@ -7,12 +7,15 @@ import '/core/app_export.dart';
 
 class MainController extends GetxController {
   final MainPointsService _mainPointsService;
+  final AuthenticationManager _authenticationManager;
 
   final RxInt points = RxInt(0);
 
   MainController({
     required MainPointsService mainPointsService,
-  }) : _mainPointsService = mainPointsService;
+    required AuthenticationManager authenticationManager,
+  })  : _mainPointsService = mainPointsService,
+        _authenticationManager = authenticationManager;
 
   @override
   void onInit() {
@@ -45,5 +48,14 @@ class MainController extends GetxController {
         ),
       );
     }
+  }
+
+  Future<void> logout() async {
+    _authenticationManager.clearAutentication();
+
+    Get.offNamedUntil(
+      AppRoutes.loginScreen,
+      (_) => true,
+    );
   }
 }

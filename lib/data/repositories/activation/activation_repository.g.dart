@@ -24,7 +24,7 @@ class _ActivationRepository implements ActivationRepository {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ActivationModel>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/customer/activate/:offerId',
+                .compose(_dio.options, '/customer/activate/${offerId}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ActivationModel.fromJson(_result.data!);

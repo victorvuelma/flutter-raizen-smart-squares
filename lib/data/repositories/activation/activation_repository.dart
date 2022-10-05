@@ -11,7 +11,7 @@ abstract class ActivationRepository {
     String baseUrl,
   }) = _ActivationRepository;
 
-  @POST("/customer/activate/:offerId")
+  @POST("/customer/activate/{offerId}")
   Future<ActivationModel> activateOffer({
     @Path("offerId") required String offerId,
   });

@@ -1,5 +1,5 @@
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:raizen_smart_squares/widgets/sidebar.dart';
+import 'package:raizen_smart_squares/presentation/main_screen/widgets/main_sidebar.dart';
 
 import 'controller/main_controller.dart';
 import 'package:flutter/material.dart';
@@ -10,31 +10,37 @@ class MainScreen extends GetWidget<MainController> {
     super.key,
   });
 
-  onTapQRCode() {
+  _onTapQRCode() {
     Get.toNamed(AppRoutes.qrCodeIntroScreen);
   }
 
-  onTapBanner() {
+  _onTapBanner() {
     Get.toNamed(AppRoutes.impactosScreen);
   }
 
-  onTapImpacts() {
+  _onTapImpacts() {
     Get.toNamed(AppRoutes.impactosScreen);
   }
 
-  onTapPlaces() {
+  _onTapPlaces() {
     Get.toNamed(AppRoutes.placesScreen);
   }
 
-  onTapBenefits() {
+  _onTapBenefits() {
     Get.toNamed(AppRoutes.benefitsScren);
+  }
+
+  _onTapLogout() {
+    controller.logout();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConstant.light10,
-      drawer: const Sidebar(),
+      drawer: MainSidebar(
+        onLogout: _onTapLogout,
+      ),
       appBar: AppBar(
         actions: [Container(width: 48)],
         toolbarHeight: 80,
@@ -75,7 +81,7 @@ class MainScreen extends GetWidget<MainController> {
                   Positioned.fill(
                     child: Center(
                       child: ElevatedButton(
-                        onPressed: onTapQRCode,
+                        onPressed: _onTapQRCode,
                         style: AppStyle.btnElevatedGreen.copyWith(
                           elevation: MaterialStateProperty.all(0),
                           padding: MaterialStateProperty.all(
@@ -136,7 +142,7 @@ class MainScreen extends GetWidget<MainController> {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: onTapBenefits,
+                      onPressed: _onTapBenefits,
                       style: AppStyle.btnElevatedGreen,
                       child: Text('lbl_main_use_points'.tr),
                     ),
@@ -152,7 +158,7 @@ class MainScreen extends GetWidget<MainController> {
                     Expanded(
                       child: PageOption(
                         icon: LucideIcons.treeDeciduous,
-                        onTap: onTapPlaces,
+                        onTap: _onTapPlaces,
                         title: "lbl_main_places".tr,
                       ),
                     ),
@@ -160,7 +166,7 @@ class MainScreen extends GetWidget<MainController> {
                     Expanded(
                       child: PageOption(
                         icon: LucideIcons.creditCard,
-                        onTap: onTapBenefits,
+                        onTap: _onTapBenefits,
                         title: "lbl_main_benefits".tr,
                       ),
                     ),
@@ -168,7 +174,7 @@ class MainScreen extends GetWidget<MainController> {
                     Expanded(
                       child: PageOption(
                         icon: LucideIcons.zap,
-                        onTap: onTapImpacts,
+                        onTap: _onTapImpacts,
                         title: "lbl_main_impacts".tr,
                       ),
                     ),
@@ -176,7 +182,7 @@ class MainScreen extends GetWidget<MainController> {
                 ),
               ),
               GestureDetector(
-                onTap: onTapBanner,
+                onTap: _onTapBanner,
                 child: ImageView(
                   imagePath: AssetConstant.imgMainBanner,
                   width: context.width,
