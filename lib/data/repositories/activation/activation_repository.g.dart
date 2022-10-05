@@ -16,7 +16,7 @@ class _ActivationRepository implements ActivationRepository {
   String? baseUrl;
 
   @override
-  Future<ActivationModel> startActivation({required offerId}) async {
+  Future<ActivationModel> activateOffer({required offerId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

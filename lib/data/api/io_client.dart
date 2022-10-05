@@ -30,18 +30,7 @@ class IoClient {
 
     if (!client.connected) {
       client.connect();
-      print('connecting....');
     }
-
-    client.onConnect((_) {
-      print('connected and listening to client!.');
-    });
-
-    client.onDisconnect((_) => print('disconnected from client!.'));
-
-    client.onError((data) => print(data));
-
-    client.onConnectError((data) => {print(data)});
   }
 
   void close() {

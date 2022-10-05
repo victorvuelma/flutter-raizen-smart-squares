@@ -12,7 +12,7 @@ abstract class ActivationRepository {
   }) = _ActivationRepository;
 
   @POST("/customer/activate/:offerId")
-  Future<ActivationModel> startActivation({
+  Future<ActivationModel> activateOffer({
     @Path("offerId") required String offerId,
   });
 }

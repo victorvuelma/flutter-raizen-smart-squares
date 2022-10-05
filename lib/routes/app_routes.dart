@@ -16,18 +16,12 @@ import 'package:raizen_smart_squares/presentation/main_screen/main_screen.dart';
 import 'package:raizen_smart_squares/presentation/main_screen/binding/main_binding.dart';
 import 'package:raizen_smart_squares/presentation/login_screen/login_screen.dart';
 import 'package:raizen_smart_squares/presentation/login_screen/binding/login_binding.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/sele_o_beneficio_screen.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/binding/sele_o_beneficio_binding.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/sele_o_beneficio_one_screen.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/binding/sele_o_beneficio_one_binding.dart';
+import 'package:raizen_smart_squares/presentation/offer_benefit/offer_benefit_screen.dart';
+import 'package:raizen_smart_squares/presentation/offer_benefit/binding/offer_benefit_binding.dart';
 import 'package:raizen_smart_squares/presentation/session_start_screen/session_start_screen.dart';
 import 'package:raizen_smart_squares/presentation/session_start_screen/binding/session_start_binding.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_two_screen/sele_o_beneficio_two_screen.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_two_screen/binding/sele_o_beneficio_two_binding.dart';
 import 'package:raizen_smart_squares/presentation/session_timer/session_timer_screen.dart';
 import 'package:raizen_smart_squares/presentation/session_timer/binding/session_timer_binding.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_three_screen/sele_o_beneficio_three_screen.dart';
-import 'package:raizen_smart_squares/presentation/sele_o_beneficio_three_screen/binding/sele_o_beneficio_three_binding.dart';
 import 'package:raizen_smart_squares/presentation/impactos_screen/impactos_screen.dart';
 import 'package:raizen_smart_squares/presentation/impactos_screen/binding/impactos_binding.dart';
 import 'package:raizen_smart_squares/presentation/qr_code_intro_screen/qr_code_intro_screen.dart';
@@ -67,21 +61,9 @@ class AppRoutes {
 
   static String testeScreen = '/teste_screen';
 
-  static String seleOBeneficioScreen = '/sele_o_beneficio_screen';
-
-  static String seleOBeneficioOneScreen = '/sele_o_beneficio_one_screen';
-
-  static String seleOBeneficioTwoScreen = '/sele_o_beneficio_two_screen';
-
-  static String seleOBeneficioThreeScreen = '/sele_o_beneficio_three_screen';
+  static String offerBenefitScreen = '/offer_benefit';
 
   static String impactosScreen = '/impactos_screen';
-
-  static String telaPrincipalOneScreen = '/tela_principal_one_screen';
-
-  static String apresentaOAppTwoScreen = '/apresenta_o_app_two_screen';
-
-  static String apresentaOAppThreeScreen = '/apresenta_o_app_three_screen';
 
   static String initialRoute = splashScreen;
 
@@ -91,34 +73,6 @@ class AppRoutes {
       page: () => CadastroScreen(),
       bindings: [
         CadastroBinding(),
-      ],
-    ),
-    GetPage(
-      name: seleOBeneficioScreen,
-      page: () => SeleOBeneficioScreen(),
-      bindings: [
-        SeleOBeneficioBinding(),
-      ],
-    ),
-    GetPage(
-      name: seleOBeneficioOneScreen,
-      page: () => SeleOBeneficioOneScreen(),
-      bindings: [
-        SeleOBeneficioOneBinding(),
-      ],
-    ),
-    GetPage(
-      name: seleOBeneficioTwoScreen,
-      page: () => SeleOBeneficioTwoScreen(),
-      bindings: [
-        SeleOBeneficioTwoBinding(),
-      ],
-    ),
-    GetPage(
-      name: seleOBeneficioThreeScreen,
-      page: () => SeleOBeneficioThreeScreen(),
-      bindings: [
-        SeleOBeneficioThreeBinding(),
       ],
     ),
     GetPage(
@@ -187,6 +141,11 @@ class AppRoutes {
       name: offerActivatedScreen,
       page: () => const OfferActivatedScreen(),
       bindings: [OfferActivatedBinding()],
+    ),
+    GetPage(
+      name: offerBenefitScreen,
+      page: () => const OfferBenefitScreen(),
+      bindings: [SeleOBeneficioBinding()],
     ),
   ];
 }
