@@ -40,6 +40,8 @@ class OfferBenefitController extends GetxController {
       final activation = await _offerActivateService.activateOffer(offer.id);
 
       state.value = OfferBenefitControllerState.success;
+
+      Get.offNamed(AppRoutes.offerActivatedScreen);
     } on Error catch (_) {
       state.value = OfferBenefitControllerState.error;
 
