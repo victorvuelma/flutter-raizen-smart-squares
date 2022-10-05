@@ -48,6 +48,10 @@ final Map<String, String> ptBr = {
   "lbl_main_benefits": "Benefícios",
   "lbl_main_impacts": "Impactos",
   "lbl_benefits_title": "Benefícios",
+  "lbl_offer_activated_ok": "Ok",
+  "msg_offer_activated_title": "Benefício resgatado com sucesso!",
+  "msg_offer_activated_email":
+      "Código promocional gerado e enviado para o seu e-mail cadastrado.",
   // Generated
   'msg_descubra_todo_o':
       'Descubra todo o universo de possibilidades das Smart Squares em um só lugar!',

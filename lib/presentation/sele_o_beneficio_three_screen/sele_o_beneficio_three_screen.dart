@@ -187,6 +187,6 @@ class SeleOBeneficioThreeScreen
   }
 
   onTapBtnResgatar() {
-    Get.toNamed(AppRoutes.beneficioResgatadoScreen);
+    Get.toNamed(AppRoutes.offerActivatedScreen);
   }
 }

@@ -186,6 +186,6 @@ class SeleOBeneficioScreen extends GetWidget<SeleOBeneficioController> {
   }
 
   onTapBtnResgatar() {
-    Get.toNamed(AppRoutes.beneficioResgatadoScreen);
+    Get.toNamed(AppRoutes.offerActivatedScreen);
   }
 }

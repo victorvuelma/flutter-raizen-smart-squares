@@ -1,3 +1,5 @@
+import 'package:raizen_smart_squares/presentation/offer_activated/offer_activated_screen.dart';
+import 'package:raizen_smart_squares/presentation/offer_activated/binding/offer_activated_binding.dart';
 import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/binding/qr_code_scanner_binding.dart';
 import 'package:raizen_smart_squares/presentation/qr_code_scanner_screen/qr_code_scanner_screen.dart';
 import 'package:raizen_smart_squares/presentation/session_result_screen/session_result_screen.dart';
@@ -16,8 +18,6 @@ import 'package:raizen_smart_squares/presentation/login_screen/login_screen.dart
 import 'package:raizen_smart_squares/presentation/login_screen/binding/login_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/sele_o_beneficio_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_screen/binding/sele_o_beneficio_binding.dart';
-import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/beneficio_resgatado_screen.dart';
-import 'package:raizen_smart_squares/presentation/beneficio_resgatado_screen/binding/beneficio_resgatado_binding.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/sele_o_beneficio_one_screen.dart';
 import 'package:raizen_smart_squares/presentation/sele_o_beneficio_one_screen/binding/sele_o_beneficio_one_binding.dart';
 import 'package:raizen_smart_squares/presentation/session_start_screen/session_start_screen.dart';
@@ -63,11 +63,11 @@ class AppRoutes {
 
   static String benefitsScren = '/benefits_screen';
 
+  static String offerActivatedScreen = '/offer_activated_screen';
+
   static String testeScreen = '/teste_screen';
 
   static String seleOBeneficioScreen = '/sele_o_beneficio_screen';
-
-  static String beneficioResgatadoScreen = '/beneficio_resgatado_screen';
 
   static String seleOBeneficioOneScreen = '/sele_o_beneficio_one_screen';
 
@@ -98,13 +98,6 @@ class AppRoutes {
       page: () => SeleOBeneficioScreen(),
       bindings: [
         SeleOBeneficioBinding(),
-      ],
-    ),
-    GetPage(
-      name: beneficioResgatadoScreen,
-      page: () => BeneficioResgatadoScreen(),
-      bindings: [
-        BeneficioResgatadoBinding(),
       ],
     ),
     GetPage(
@@ -189,6 +182,11 @@ class AppRoutes {
       name: benefitsScren,
       page: () => const BenefitsScreen(),
       bindings: [BenefitsBinding()],
+    ),
+    GetPage(
+      name: offerActivatedScreen,
+      page: () => const OfferActivatedScreen(),
+      bindings: [OfferActivatedBinding()],
     ),
   ];
 }
