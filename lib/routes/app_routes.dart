@@ -67,8 +67,6 @@ class AppRoutes {
 
   static String seleOBeneficioScreen = '/sele_o_beneficio_screen';
 
-  static String frameSixScreen = '/frame_six_screen';
-
   static String beneficioResgatadoScreen = '/beneficio_resgatado_screen';
 
   static String seleOBeneficioOneScreen = '/sele_o_beneficio_one_screen';
@@ -84,8 +82,6 @@ class AppRoutes {
   static String apresentaOAppTwoScreen = '/apresenta_o_app_two_screen';
 
   static String apresentaOAppThreeScreen = '/apresenta_o_app_three_screen';
-
-  static String appNavigationScreen = '/app_navigation_screen';
 
   static String initialRoute = splashScreen;
 

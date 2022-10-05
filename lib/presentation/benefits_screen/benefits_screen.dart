@@ -19,6 +19,7 @@ class BenefitsScreen extends GetWidget<BenefitsController> {
         child: SafeArea(
           child: Container(
             width: context.width,
+            margin: const EdgeInsets.only(top: 16),
             decoration: const BoxDecoration(
               color: ColorConstant.light10,
               borderRadius: BorderRadius.vertical(
@@ -46,18 +47,20 @@ class BenefitsScreen extends GetWidget<BenefitsController> {
                                   svgPath: AssetConstant.imgRoots,
                                 ),
                                 const SizedBox(width: 8),
-                                Obx(() => Text(
-                                      "lbl_total_points".trParams(
-                                        {
-                                          "amount": controller.points.value
-                                              .toString(),
-                                          "pt": controller.points.value == 1
-                                              ? "lbl_point".tr
-                                              : "lbl_points".tr,
-                                        },
-                                      ).toUpperCase(),
-                                      style: AppStyle.txtMediumTitle,
-                                    )),
+                                Obx(
+                                  () => Text(
+                                    "lbl_total_points".trParams(
+                                      {
+                                        "amount":
+                                            controller.points.value.toString(),
+                                        "pt": controller.points.value == 1
+                                            ? "lbl_point".tr
+                                            : "lbl_points".tr,
+                                      },
+                                    ).toUpperCase(),
+                                    style: AppStyle.txtMediumTitle,
+                                  ),
+                                ),
                               ],
                             )
                           ],
@@ -67,6 +70,36 @@ class BenefitsScreen extends GetWidget<BenefitsController> {
                   ),
                 ),
                 const Divider(),
+                Obx(() {
+                  if (controller.state.value ==
+                      BenefitsControllerState.success) {
+                    return Column(
+                      children: controller.offers
+                          .map(
+                            (offer) => Container(
+                              padding: const EdgeInsets.all(16),
+                              child: InkWell(
+                                onTap: () {},
+                                child: ImageView(
+                                  url: offer.imageUrl,
+                                  width: context.width,
+                                ),
+                              ),
+                            ),
+                          )
+                          .toList(growable: false),
+                    );
+                  }
+
+                  return SizedBox(
+                    height: context.height * 0.8,
+                    child: const Center(
+                      child: CircularProgressIndicator(
+                        color: ColorConstant.primary,
+                      ),
+                    ),
+                  );
+                })
               ],
             ),
           ),
